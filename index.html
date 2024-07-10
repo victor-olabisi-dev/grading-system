@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    .two{
+        background-image: url('images/200w.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .one{
+        width: 300px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    }
+    .enter{
+        width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+input{
+    width: 215px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+button{
+    width: 55px;
+    height: 40px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: #3e8e41;
+}
+#showResult{
+    background-color: #ddd;
+    width: 100px;
+    padding-left: 5px;
+    margin-left: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+}
+h1{
+    font-weight: bold;
+}
+ </style>
+<body>
+    <section class="two">
+         <div class="enter">
+       
+            <div class="one">
+                <marquee behavior="" direction="">Type in your result here</marquee>
+                <h1><U>GRADING SYSTEM</U></h1>
+                <input type="number" placeholder="input the score" id="score">
+                <button onclick="CheckScore()">check</button>
+                <div id="showResult">Your result</div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        var song =  new Audio('clap.wav')
+        var songb =  new Audio('defend.mp3')
+        var songc =  new Audio('Poor.mp3')
+        var songd =  new Audio('play.mp3')
+        var songe =  new Audio('Shout.mp3')
+        var songf =  new Audio('make.mp3')
+       console.log(showResult.innerHTML);
+
+        function CheckScore(){
+            console.log(score.value);
+
+       
+             if(score.value >0 && score.value<40){
+                console.log('f')
+            showResult.innerHTML ='f'
+             songf.play()
+            }
+      
+            if(score.value >=40 && score.value<45){
+            console.log('e8')
+            showResult.innerHTML ='e8'
+             songe.play()
+            }
+            
+            if(score.value >45 && score.value<50){
+            console.log('d7')
+            showResult.innerHTML ='d7'
+             songd.play()
+            }
+        
+            if(score.value >=50 && score.value<55){
+            console.log('c6')
+            showResult.innerHTML ='c6'
+             songc.play()
+            }
+    
+            if(score.value >=55 && score.value<60){
+            console.log('c5')
+            showResult.innerHTML ='c5'
+             songc.play()
+            }
+   
+            if(score.value >=60 && score.value<65){
+            console.log('c4')
+            showResult.innerHTML ='c4'
+             songc.play()
+            }
+  
+            if(score.value >=65 && score.value<70){
+            console.log('b3')
+            showResult.innerHTML ='b3'
+             songb.play()
+            }
+   
+            if(score.value >=70 && score.value<75){
+            console.log('b2')
+            showResult.innerHTML ='b2'
+             songb.play()
+            }
+            if(score.value >=75 && score.value<=100){
+            console.log('a1')
+            showResult.innerHTML ='a1'
+            song.play()
+            }
+            // alert('hi')
+        }
+    </script>
+</body>
+</html>
